@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51F8CFC221A7BCBB00EEB0BA /* TambahKomik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFC121A7BCBB00EEB0BA /* TambahKomik.swift */; };
+		51F8CFC621A7BD2600EEB0BA /* EditKomik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFC521A7BD2600EEB0BA /* EditKomik.swift */; };
+		51F8CFCB21A7BF1500EEB0BA /* DetilKomikAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFCA21A7BF1500EEB0BA /* DetilKomikAdmin.swift */; };
+		51F8CFCD21A7BF3900EEB0BA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFCC21A7BF3900EEB0BA /* Login.swift */; };
+		51F8CFCF21A7BF5400EEB0BA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFCE21A7BF5400EEB0BA /* Register.swift */; };
+		51F8CFD121A7BF7400EEB0BA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFD021A7BF7400EEB0BA /* Profile.swift */; };
+		51F8CFD321A7BF8C00EEB0BA /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFD221A7BF8C00EEB0BA /* EditProfile.swift */; };
+		51F8CFD521A7BFAA00EEB0BA /* DetilKomikUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFD421A7BFAA00EEB0BA /* DetilKomikUser.swift */; };
+		51F8CFD921A7C01100EEB0BA /* ListKomikUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFD821A7C01100EEB0BA /* ListKomikUser.swift */; };
+		51F8CFDD21A7ECD600EEB0BA /* ListKomikAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F8CFDC21A7ECD600EEB0BA /* ListKomikAdmin.swift */; };
 		598A45C021A277D600F8F5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A45BF21A277D600F8F5F1 /* AppDelegate.swift */; };
 		598A45C221A277D600F8F5F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A45C121A277D600F8F5F1 /* ViewController.swift */; };
 		598A45C521A277D600F8F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598A45C321A277D600F8F5F1 /* Main.storyboard */; };
@@ -17,6 +27,16 @@
 
 /* Begin PBXFileReference section */
 		15D90779A7B6B9D40B3A661C /* Pods_TugasBesar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TugasBesar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F8CFC121A7BCBB00EEB0BA /* TambahKomik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahKomik.swift; sourceTree = "<group>"; };
+		51F8CFC521A7BD2600EEB0BA /* EditKomik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKomik.swift; sourceTree = "<group>"; };
+		51F8CFCA21A7BF1500EEB0BA /* DetilKomikAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetilKomikAdmin.swift; sourceTree = "<group>"; };
+		51F8CFCC21A7BF3900EEB0BA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		51F8CFCE21A7BF5400EEB0BA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		51F8CFD021A7BF7400EEB0BA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		51F8CFD221A7BF8C00EEB0BA /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		51F8CFD421A7BFAA00EEB0BA /* DetilKomikUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetilKomikUser.swift; sourceTree = "<group>"; };
+		51F8CFD821A7C01100EEB0BA /* ListKomikUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKomikUser.swift; sourceTree = "<group>"; };
+		51F8CFDC21A7ECD600EEB0BA /* ListKomikAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKomikAdmin.swift; sourceTree = "<group>"; };
 		598A45BC21A277D600F8F5F1 /* TugasBesar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TugasBesar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598A45BF21A277D600F8F5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598A45C121A277D600F8F5F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +95,16 @@
 				598A45C621A277D900F8F5F1 /* Assets.xcassets */,
 				598A45C821A277D900F8F5F1 /* LaunchScreen.storyboard */,
 				598A45CB21A277D900F8F5F1 /* Info.plist */,
+				51F8CFC121A7BCBB00EEB0BA /* TambahKomik.swift */,
+				51F8CFC521A7BD2600EEB0BA /* EditKomik.swift */,
+				51F8CFCA21A7BF1500EEB0BA /* DetilKomikAdmin.swift */,
+				51F8CFCC21A7BF3900EEB0BA /* Login.swift */,
+				51F8CFCE21A7BF5400EEB0BA /* Register.swift */,
+				51F8CFD021A7BF7400EEB0BA /* Profile.swift */,
+				51F8CFD221A7BF8C00EEB0BA /* EditProfile.swift */,
+				51F8CFD421A7BFAA00EEB0BA /* DetilKomikUser.swift */,
+				51F8CFD821A7C01100EEB0BA /* ListKomikUser.swift */,
+				51F8CFDC21A7ECD600EEB0BA /* ListKomikAdmin.swift */,
 			);
 			path = TugasBesar;
 			sourceTree = "<group>";
@@ -208,8 +238,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F8CFD921A7C01100EEB0BA /* ListKomikUser.swift in Sources */,
+				51F8CFC621A7BD2600EEB0BA /* EditKomik.swift in Sources */,
+				51F8CFD521A7BFAA00EEB0BA /* DetilKomikUser.swift in Sources */,
+				51F8CFDD21A7ECD600EEB0BA /* ListKomikAdmin.swift in Sources */,
+				51F8CFD121A7BF7400EEB0BA /* Profile.swift in Sources */,
+				51F8CFC221A7BCBB00EEB0BA /* TambahKomik.swift in Sources */,
 				598A45C221A277D600F8F5F1 /* ViewController.swift in Sources */,
+				51F8CFCD21A7BF3900EEB0BA /* Login.swift in Sources */,
+				51F8CFCF21A7BF5400EEB0BA /* Register.swift in Sources */,
 				598A45C021A277D600F8F5F1 /* AppDelegate.swift in Sources */,
+				51F8CFCB21A7BF1500EEB0BA /* DetilKomikAdmin.swift in Sources */,
+				51F8CFD321A7BF8C00EEB0BA /* EditProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

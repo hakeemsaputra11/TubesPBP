@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Login" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="glO-yA-Obe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register for new user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZe-8A-fSK">
                                 <rect key="frame" x="71" y="554" width="121" height="15"/>
@@ -53,12 +56,21 @@
                                 <rect key="frame" x="210" y="547" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="btnSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbT-lU-qHo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35073489470539626" green="0.75778908020073676" blue="0.87180758248730961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="2ux-Bd-tTb"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="RTF-mF-Xjc" id="Pqn-HD-fXt"/>
+                        <outlet property="txtUsername" destination="XEl-1K-Och" id="9Cw-yl-1eo"/>
+                        <segue destination="XDX-eL-KDI" kind="show" identifier="registerVC" id="fAT-pV-skA"/>
+                        <segue destination="ldS-bA-8Of" kind="show" identifier="listAdminVC" id="13Q-0l-i82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,16 +94,17 @@
             </objects>
             <point key="canvasLocation" x="-20" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--List Komik Admin-->
         <scene sceneID="MZP-bD-FYp">
             <objects>
-                <viewController id="ldS-bA-8Of" sceneMemberID="viewController">
+                <viewController id="ldS-bA-8Of" customClass="ListKomikAdmin" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9f9-sy-gCx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-Ph-8e1">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-Ph-8e1">
                                 <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="List Komik" id="AEj-Zn-nUe"/>
                                 </items>
@@ -143,166 +156,139 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="XFj-Ph-8e1" firstAttribute="top" secondItem="PI5-0R-GZ6" secondAttribute="top" constant="15" id="byW-pq-Uh1"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PI5-0R-GZ6"/>
                     </view>
+                    <connections>
+                        <segue destination="smO-Be-tC5" kind="show" identifier="tambahKomikVC" id="wLw-fg-z3G"/>
+                        <segue destination="BFa-lu-dYX" kind="show" identifier="detilKAdminVC" id="idU-KU-wvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZI2-Qd-soO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="-559"/>
         </scene>
-        <!--View Controller-->
+        <!--Register-->
         <scene sceneID="xUm-Qj-Cge">
             <objects>
-                <viewController id="XDX-eL-KDI" sceneMemberID="viewController">
+                <viewController id="XDX-eL-KDI" customClass="Register" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mUk-SI-zSS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OI-Gg-siF">
-                                <rect key="frame" x="0.0" y="35" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="REGISTER" id="0jD-95-vXW"/>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19U-8k-3BC">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19U-8k-3BC">
                                 <rect key="frame" x="139" y="162" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ech-wi-sVR">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ech-wi-sVR">
                                 <rect key="frame" x="139" y="211" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xL7-QA-LDY">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xL7-QA-LDY">
                                 <rect key="frame" x="139" y="260" width="220" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="tKk-68-DOS"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dai-AW-BAb">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dai-AW-BAb">
                                 <rect key="frame" x="139" y="308" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUE-sh-viN">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUE-sh-viN">
                                 <rect key="frame" x="139" y="354" width="220" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Uca-Ye-uP9"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eER-KN-dz6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eER-KN-dz6">
                                 <rect key="frame" x="16" y="167" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddO-56-56e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddO-56-56e">
                                 <rect key="frame" x="16" y="167" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrD-Zf-3JC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrD-Zf-3JC">
                                 <rect key="frame" x="16" y="216" width="79" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="bv2-1X-J8o"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-1w-NtX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-1w-NtX">
                                 <rect key="frame" x="16" y="260" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00t-E5-Ive">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00t-E5-Ive">
                                 <rect key="frame" x="15" y="313" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD8-TI-FUa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD8-TI-FUa">
                                 <rect key="frame" x="15" y="359" width="111" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="X7Z-a1-72z"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-ek-5At">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-ek-5At">
                                 <rect key="frame" x="138" y="464" width="100" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="REGISTER"/>
+                                <connections>
+                                    <action selector="btnRegister:" destination="XDX-eL-KDI" eventType="touchUpInside" id="lQ5-z1-bKO"/>
+                                </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3OI-Gg-siF">
+                                <rect key="frame" x="1" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="REGISTER" id="0jD-95-vXW"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.35064074397087097" green="0.75633448362350464" blue="0.86960315704345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="SUE-sh-viN" firstAttribute="leading" secondItem="dD8-TI-FUa" secondAttribute="trailing" constant="13" id="0d6-cJ-21B"/>
-                            <constraint firstItem="00t-E5-Ive" firstAttribute="leading" secondItem="Pj8-Ta-DhC" secondAttribute="leading" constant="15" id="0vM-Tl-5kl"/>
-                            <constraint firstItem="3OI-Gg-siF" firstAttribute="leading" secondItem="mUk-SI-zSS" secondAttribute="leading" id="3SB-6d-Cnh"/>
-                            <constraint firstItem="JgI-1w-NtX" firstAttribute="top" secondItem="JrD-Zf-3JC" secondAttribute="bottom" constant="23" id="4HJ-l4-ayG"/>
-                            <constraint firstItem="x5y-ek-5At" firstAttribute="top" secondItem="SUE-sh-viN" secondAttribute="bottom" constant="80" id="5jQ-ei-TGT"/>
-                            <constraint firstItem="19U-8k-3BC" firstAttribute="leading" secondItem="ech-wi-sVR" secondAttribute="leading" id="6vd-Au-vbh"/>
-                            <constraint firstItem="SUE-sh-viN" firstAttribute="top" secondItem="dai-AW-BAb" secondAttribute="bottom" constant="16" id="8mo-OE-LnZ"/>
-                            <constraint firstItem="Pj8-Ta-DhC" firstAttribute="bottom" secondItem="dD8-TI-FUa" secondAttribute="bottom" constant="292" id="AXr-Ri-G1I"/>
-                            <constraint firstItem="ech-wi-sVR" firstAttribute="leading" secondItem="xL7-QA-LDY" secondAttribute="leading" id="AmO-hb-lHy"/>
-                            <constraint firstItem="x5y-ek-5At" firstAttribute="leading" secondItem="Pj8-Ta-DhC" secondAttribute="leading" constant="138" id="B2t-lD-TlU"/>
-                            <constraint firstItem="00t-E5-Ive" firstAttribute="centerY" secondItem="dai-AW-BAb" secondAttribute="centerY" id="D5M-R6-2Ay"/>
-                            <constraint firstItem="dai-AW-BAb" firstAttribute="leading" secondItem="SUE-sh-viN" secondAttribute="leading" id="EhR-BF-kql"/>
-                            <constraint firstItem="ddO-56-56e" firstAttribute="leading" secondItem="eER-KN-dz6" secondAttribute="leading" id="F6e-2d-J2Y"/>
-                            <constraint firstItem="xL7-QA-LDY" firstAttribute="trailing" secondItem="dai-AW-BAb" secondAttribute="trailing" id="Hki-4j-daY"/>
-                            <constraint firstAttribute="trailing" secondItem="3OI-Gg-siF" secondAttribute="trailing" id="ICx-KE-5HY"/>
-                            <constraint firstItem="Pj8-Ta-DhC" firstAttribute="bottom" secondItem="x5y-ek-5At" secondAttribute="bottom" constant="164" id="ISX-cA-SVr"/>
-                            <constraint firstItem="eER-KN-dz6" firstAttribute="leading" secondItem="JrD-Zf-3JC" secondAttribute="leading" id="IZ1-pQ-pED"/>
-                            <constraint firstItem="3OI-Gg-siF" firstAttribute="top" secondItem="Pj8-Ta-DhC" secondAttribute="top" constant="15" id="MXj-sK-1XH"/>
-                            <constraint firstItem="3OI-Gg-siF" firstAttribute="centerX" secondItem="x5y-ek-5At" secondAttribute="centerX" id="NaC-zV-e0L"/>
-                            <constraint firstItem="ech-wi-sVR" firstAttribute="top" secondItem="19U-8k-3BC" secondAttribute="bottom" constant="19" id="NcD-xr-L72"/>
-                            <constraint firstItem="00t-E5-Ive" firstAttribute="leading" secondItem="dD8-TI-FUa" secondAttribute="leading" id="P0V-fB-plN"/>
-                            <constraint firstItem="dai-AW-BAb" firstAttribute="trailing" secondItem="SUE-sh-viN" secondAttribute="trailing" id="QzJ-fN-oAR"/>
-                            <constraint firstItem="ddO-56-56e" firstAttribute="leading" secondItem="mUk-SI-zSS" secondAttribute="leadingMargin" id="REw-Fa-RFN"/>
-                            <constraint firstItem="19U-8k-3BC" firstAttribute="top" secondItem="3OI-Gg-siF" secondAttribute="bottom" constant="83" id="SHU-9D-Hpq"/>
-                            <constraint firstItem="dD8-TI-FUa" firstAttribute="top" secondItem="00t-E5-Ive" secondAttribute="bottom" constant="25" id="XRU-uC-aeJ"/>
-                            <constraint firstItem="ddO-56-56e" firstAttribute="baseline" secondItem="eER-KN-dz6" secondAttribute="firstBaseline" id="aZS-fd-E2o"/>
-                            <constraint firstItem="JrD-Zf-3JC" firstAttribute="leading" secondItem="JgI-1w-NtX" secondAttribute="leading" id="asI-Ow-yN4"/>
-                            <constraint firstItem="19U-8k-3BC" firstAttribute="trailing" secondItem="ech-wi-sVR" secondAttribute="trailing" id="b3f-z5-aY2"/>
-                            <constraint firstItem="ddO-56-56e" firstAttribute="centerY" secondItem="19U-8k-3BC" secondAttribute="centerY" id="cTo-TV-4YC"/>
-                            <constraint firstItem="JgI-1w-NtX" firstAttribute="top" secondItem="xL7-QA-LDY" secondAttribute="top" id="eDr-8i-zxD"/>
-                            <constraint firstItem="JrD-Zf-3JC" firstAttribute="top" secondItem="ddO-56-56e" secondAttribute="bottom" constant="28" id="eUT-Em-IJT"/>
-                            <constraint firstItem="19U-8k-3BC" firstAttribute="trailing" secondItem="mUk-SI-zSS" secondAttribute="trailingMargin" id="f8P-RQ-z8E"/>
-                            <constraint firstItem="00t-E5-Ive" firstAttribute="top" secondItem="JgI-1w-NtX" secondAttribute="bottom" constant="32" id="fFG-Ps-sex"/>
-                            <constraint firstItem="ech-wi-sVR" firstAttribute="trailing" secondItem="xL7-QA-LDY" secondAttribute="trailing" id="gFr-A5-t8x"/>
-                            <constraint firstItem="xL7-QA-LDY" firstAttribute="top" secondItem="ech-wi-sVR" secondAttribute="bottom" constant="19" id="hoK-VZ-Wz9"/>
-                            <constraint firstItem="dai-AW-BAb" firstAttribute="top" secondItem="xL7-QA-LDY" secondAttribute="bottom" constant="18" id="rJW-OR-x1C"/>
-                            <constraint firstItem="xL7-QA-LDY" firstAttribute="leading" secondItem="dai-AW-BAb" secondAttribute="leading" id="sLn-2U-VSW"/>
-                            <constraint firstItem="JrD-Zf-3JC" firstAttribute="centerY" secondItem="ech-wi-sVR" secondAttribute="centerY" id="uPZ-IH-gxi"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pj8-Ta-DhC"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="txtConPassword" destination="mUk-SI-zSS" id="b44-AN-K1Z"/>
+                        <outlet property="txtEmail" destination="mUk-SI-zSS" id="wt0-df-Zt7"/>
+                        <outlet property="txtNama" destination="mUk-SI-zSS" id="5E8-hO-fsG"/>
+                        <outlet property="txtPassword" destination="mUk-SI-zSS" id="RwU-PX-pOb"/>
+                        <outlet property="txtUsername" destination="mUk-SI-zSS" id="ZEi-G9-kom"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFC-6I-neX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Detil Komik User-->
         <scene sceneID="rwQ-XS-amY">
             <objects>
-                <viewController id="icK-9r-bPq" sceneMemberID="viewController">
+                <viewController id="icK-9r-bPq" customClass="DetilKomikUser" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ga-q9-pec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,12 +381,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOM-hF-bkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="1487"/>
+            <point key="canvasLocation" x="1076" y="1528"/>
         </scene>
-        <!--View Controller-->
+        <!--List Komik User-->
         <scene sceneID="08l-Nn-bYD">
             <objects>
-                <viewController id="EBc-ht-tm4" sceneMemberID="viewController">
+                <viewController id="EBc-ht-tm4" customClass="ListKomikUser" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWc-rN-Hec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,7 +438,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Hfo-rY-3uI"/>
-                                    <barButtonItem title="Item" image="IconUser" id="R9N-gu-0St"/>
+                                    <barButtonItem title="Item" image="IconUser" id="R9N-gu-0St">
+                                        <connections>
+                                            <action selector="btnProfile:" destination="EBc-ht-tm4" id="YSS-JP-fFY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yPX-zg-xTF"/>
                                 </items>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -461,15 +451,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fZD-fE-IKY"/>
                     </view>
+                    <connections>
+                        <segue destination="6Ui-nm-MQJ" kind="show" identifier="profileVC" id="n4E-3y-6At"/>
+                        <segue destination="icK-9r-bPq" kind="show" identifier="detilKuser" id="5i8-Cl-cmw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZC-Qf-AcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="815"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="G2I-Hv-ebY">
             <objects>
-                <viewController id="6Ui-nm-MQJ" sceneMemberID="viewController">
+                <viewController id="6Ui-nm-MQJ" customClass="Profile" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0in-tK-fA4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -543,15 +537,18 @@
                         <color key="backgroundColor" red="0.35064074397087097" green="0.75633448362350464" blue="0.86960315704345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dyM-K8-Hxy"/>
                     </view>
+                    <connections>
+                        <segue destination="kCP-of-OKt" kind="show" identifier="editProfileVC" id="Rxg-k3-S7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo4-DF-k7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750" y="815"/>
         </scene>
-        <!--View Controller-->
+        <!--Detil Komik Admin-->
         <scene sceneID="PtO-Vt-39q">
             <objects>
-                <viewController id="BFa-lu-dYX" sceneMemberID="viewController">
+                <viewController id="BFa-lu-dYX" customClass="DetilKomikAdmin" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xE-JE-HxN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,15 +638,18 @@
                         <color key="backgroundColor" red="0.35064074397087097" green="0.75633448362350464" blue="0.86960315704345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="mj1-05-Gmr"/>
                     </view>
+                    <connections>
+                        <segue destination="Kee-eA-vTg" kind="show" identifier="editKAdminVC" id="HXs-gg-R4d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0H-Pk-qWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750" y="-559"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Komik-->
         <scene sceneID="TmX-F9-nfA">
             <objects>
-                <viewController id="Kee-eA-vTg" sceneMemberID="viewController">
+                <viewController id="Kee-eA-vTg" customClass="EditKomik" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acW-3Q-F6E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -758,10 +758,10 @@
             </objects>
             <point key="canvasLocation" x="2463" y="-559"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Profile-->
         <scene sceneID="HTA-7I-6fp">
             <objects>
-                <viewController id="kCP-of-OKt" sceneMemberID="viewController">
+                <viewController id="kCP-of-OKt" customClass="EditProfile" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Uq-7n-b35">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -770,7 +770,7 @@
                                 <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Profile" id="Qsj-BL-Tvp"/>
+                                    <navigationItem title="Edit Profile" id="Qsj-BL-Tvp"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-bZ-GeD">
@@ -852,10 +852,10 @@
             </objects>
             <point key="canvasLocation" x="2431" y="815"/>
         </scene>
-        <!--View Controller-->
+        <!--Tambah Komik-->
         <scene sceneID="PNO-iX-NZm">
             <objects>
-                <viewController id="smO-Be-tC5" sceneMemberID="viewController">
+                <viewController id="smO-Be-tC5" customClass="TambahKomik" customModule="TugasBesar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKv-Kn-PJY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -962,7 +962,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDb-jZ-zvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.80000000000001" y="-559.07046476761627"/>
+            <point key="canvasLocation" x="362" y="-559"/>
         </scene>
     </scenes>
     <resources>
