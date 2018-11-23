@@ -12,9 +12,11 @@
 		598A45C521A277D600F8F5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598A45C321A277D600F8F5F1 /* Main.storyboard */; };
 		598A45C721A277D900F8F5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598A45C621A277D900F8F5F1 /* Assets.xcassets */; };
 		598A45CA21A277D900F8F5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598A45C821A277D900F8F5F1 /* LaunchScreen.storyboard */; };
+		6D0535068530831E3D39DAB3 /* Pods_TugasBesar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D90779A7B6B9D40B3A661C /* Pods_TugasBesar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15D90779A7B6B9D40B3A661C /* Pods_TugasBesar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TugasBesar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		598A45BC21A277D600F8F5F1 /* TugasBesar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TugasBesar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598A45BF21A277D600F8F5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598A45C121A277D600F8F5F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		598A45C621A277D900F8F5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598A45C921A277D900F8F5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598A45CB21A277D900F8F5F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		969513908B431F302FB09087 /* Pods-TugasBesar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TugasBesar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TugasBesar/Pods-TugasBesar.debug.xcconfig"; sourceTree = "<group>"; };
+		A4A6249337814E0FECA350B2 /* Pods-TugasBesar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TugasBesar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TugasBesar/Pods-TugasBesar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0535068530831E3D39DAB3 /* Pods_TugasBesar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA5E1F1BE05464A414472C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15D90779A7B6B9D40B3A661C /* Pods_TugasBesar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		598A45B321A277D600F8F5F1 = {
 			isa = PBXGroup;
 			children = (
 				598A45BE21A277D600F8F5F1 /* TugasBesar */,
 				598A45BD21A277D600F8F5F1 /* Products */,
+				FD70443156B7FFC00F21C307 /* Pods */,
+				2EA5E1F1BE05464A414472C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = TugasBesar;
 			sourceTree = "<group>";
 		};
+		FD70443156B7FFC00F21C307 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				969513908B431F302FB09087 /* Pods-TugasBesar.debug.xcconfig */,
+				A4A6249337814E0FECA350B2 /* Pods-TugasBesar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 598A45CE21A277D900F8F5F1 /* Build configuration list for PBXNativeTarget "TugasBesar" */;
 			buildPhases = (
+				73BC4B350E4441FE2BE06E75 /* [CP] Check Pods Manifest.lock */,
 				598A45B821A277D600F8F5F1 /* Sources */,
 				598A45B921A277D600F8F5F1 /* Frameworks */,
 				598A45BA21A277D600F8F5F1 /* Resources */,
+				761B076640E1FEB9D5B34704 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73BC4B350E4441FE2BE06E75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TugasBesar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		761B076640E1FEB9D5B34704 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TugasBesar/Pods-TugasBesar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TugasBesar/Pods-TugasBesar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		598A45B821A277D600F8F5F1 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		598A45CF21A277D900F8F5F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 969513908B431F302FB09087 /* Pods-TugasBesar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +371,7 @@
 		};
 		598A45D021A277D900F8F5F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A6249337814E0FECA350B2 /* Pods-TugasBesar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
