@@ -10,13 +10,36 @@ import UIKit
 
 class Register: UIViewController {
 
-    @IBOutlet var txtNama: UIView!
-    @IBOutlet var txtUsername: UIView!
-    @IBOutlet var txtEmail: UIView!
-    @IBOutlet var txtPassword: UIView!
-    @IBOutlet var txtConPassword: UIView!
+
+    @IBOutlet weak var txtNama: UITextField!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtConPassword: UITextField!
+    
     
     @IBAction func btnRegister(_ sender: Any) {
+        if(txtNama.text! == "" || txtUsername.text! == "" || txtEmail.text! == "" || txtPassword.text! == "" || txtConPassword.text! == ""){
+            let alertController = UIAlertController(title: "Alert", message:
+                "Field tidak boleh ada yang kosong", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else if(txtPassword.text! != txtConPassword.text!){
+            let alertController = UIAlertController(title: "Alert", message:
+                "Confirm Password harus sama dengan password", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            let alertController = UIAlertController(title: "Message", message:
+                "Registrasi Telah Dilakukan", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {

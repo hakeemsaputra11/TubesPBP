@@ -9,12 +9,16 @@
 import UIKit
 
 class ListKomikAdmin: UIViewController {
-
+    
+    @IBAction func addComic(_ sender: Any) {
+        performSegue(withIdentifier: "tambahKomikVC", sender: Any?.self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+    }   
     
 
     /*

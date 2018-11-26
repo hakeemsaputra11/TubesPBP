@@ -16,7 +16,10 @@ class TambahKomik: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func cancel(_ sender: Any) {
+        performSegue(withIdentifier: "toShowVC", sender: Any?.self)
+    }
+    
     /*
     // MARK: - Navigation
 
